@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="yellow">
+    <H1>  this is Page 1</H1>
+   <a href="{%url 'htmlwebsite:Page2'%}">Link to Page2</a>
+
+   <button type="button"><a href="{%url 'htmlwebsite:Page2'%}">
+    Page 2</button>
+
+    <a href="{%url 'htmlwebsite:Page2'%}">
+        <button type="submit" class="login-button">Login</button>
+     </a>
+
+
+     <form method="POST">
+        {% csrf_token %}
+        <label for="fname">Name</label>
+        <input type="text" id="fname" name="name" placeholder="Your name..">
+<br>
+        <label for="lname">Email</label>
+        <input type="text" id="lname" name="email" placeholder="Your last name..">
+        <br>
+        <label for="lname">Contact</label>
+        <input type="text" id="lname" name="phone" placeholder="Your last name..">
+
+        <br>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="address" placeholder="Write something.." style="height:200px"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
